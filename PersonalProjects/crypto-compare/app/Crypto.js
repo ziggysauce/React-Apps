@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Crypto from './Crypto';
 
-class App extends Component {
+class Crypto extends Component {
   constructor() {
 		super();
 		this.state = {};
@@ -10,12 +9,9 @@ class App extends Component {
 	
   render() {
 		return (
-			<div>
-				<h1>Initial test from App.js</h1>
-				<Crypto />
-			</div>
+			<div>Initial Test from Crypto.js</div>
 		);
   }
 }
 
-export default App;
+export default Crypto;

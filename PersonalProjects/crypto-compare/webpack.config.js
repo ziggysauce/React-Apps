@@ -3,7 +3,7 @@ const SRC_DIR = path.resolve(__dirname, './app');
 const BUILD_DIR = path.resolve(__dirname, './app/static');
 
 module.exports = {
-  entry: path.resolve(SRC_DIR, 'app.js'),
+  entry: path.resolve(SRC_DIR, 'Index.js'),
   output: {
     filename: 'bundle.js',
     path: BUILD_DIR

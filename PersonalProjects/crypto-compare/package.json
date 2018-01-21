@@ -1,0 +1,29 @@
+{
+  "name": "crypto-compare",
+  "version": "1.0.0",
+  "description": "Displays cryptocurrency value comparisons in USD",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js & webpack -w",
+    "compile": "webpack -w"
+  },
+  "author": "Dan Nguyen",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.18.2",
+    "css-loader": "^0.28.9",
+    "express": "^4.16.2",
+    "nodemon": "^1.14.11",
+    "path": "^0.12.7",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0"
+  }
+}

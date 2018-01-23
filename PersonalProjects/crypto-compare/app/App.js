@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 import styles from './styles/app.scss';
-import Crypto from './components/Crypto';
+import Card from './components/Card';
 import Footer from './components/Footer';
 
 
@@ -16,9 +16,9 @@ class App extends Component {
 		return (
 			<div className="app-container">
 				<h1>Cryptocurrency Exchange</h1>
-				<h4>Shows current cryptocurrency exchange rates (USD).</h4>
-				<Crypto />
-				<p>Data provided by <span>[Insert Data API Link]</span></p>
+				<h4>Cryptocurrency exchange rates (USD). Percentage change over last 24 hours.</h4>
+				<Card />
+				<p>Data provided by <a href="https://www.cryptocompare.com/api" target="_blank">CryptoCompare</a></p>
 				<Footer />
 			</div>
 		);

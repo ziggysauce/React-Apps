@@ -3,6 +3,7 @@ $medium-grey: #555;
 $light-grey: #F8F8F8;
 $primary-blue: #244b7b;
 $accent-blue: #8acbff;
+$link: #fff399;
 
 
 html, body {
@@ -15,35 +16,40 @@ html, body {
 
 .app-container {
   box-sizing: border-box;
-  // border: 2px solid red;
-  height: calc(100vh - 125px);
+  // border: 2px solid yellow;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 125px;
 
   font-family: 'Montserrat', sans-serif;
-}
 
-h1 {
-  // border: 1px solid blue;
-  min-width: 60vw;
-  padding: 10px;
-  color: $light-grey;
-}
-
-h4 {
-  // border: 1px solid blue;
-  min-width: 60vw;
-  padding: 0px 10px;
-  margin-top: -20px;
-  color: $accent-blue;
-}
-
-p {
-  color: $light-grey;
-
-  span {
+  h1 {
+    // border: 1px solid blue;
+    width: 60vw;
+    padding: 10px;
+    color: $light-grey;
+  }
+  
+  h4 {
+    // border: 1px solid blue;
+    width: 60vw;
+    padding: 0px 10px;
+    margin-top: -20px;
     color: $accent-blue;
+  }
+  
+  p {
+    color: $light-grey;
+  
+    a {
+      color: $link;
+      text-decoration: none;
+  
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }

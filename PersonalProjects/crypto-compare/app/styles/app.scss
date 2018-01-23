@@ -1,0 +1,49 @@
+$dark-grey: #141414;
+$medium-grey: #555;
+$light-grey: #F8F8F8;
+$primary-blue: #244b7b;
+$accent-blue: #8acbff;
+
+
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: $primary-blue;
+}
+
+.app-container {
+  box-sizing: border-box;
+  // border: 2px solid red;
+  height: calc(100vh - 125px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  // border: 1px solid blue;
+  min-width: 60vw;
+  padding: 10px;
+  color: $light-grey;
+}
+
+h4 {
+  // border: 1px solid blue;
+  min-width: 60vw;
+  padding: 0px 10px;
+  margin-top: -20px;
+  color: $accent-blue;
+}
+
+p {
+  color: $light-grey;
+
+  span {
+    color: $accent-blue;
+  }
+}

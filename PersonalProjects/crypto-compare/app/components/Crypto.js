@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import styles from '../styles/crypto.scss';
+import Card from './Card';
 
 class Crypto extends Component {
   constructor() {
@@ -9,7 +11,9 @@ class Crypto extends Component {
 	
   render() {
 		return (
-			<div>Initial Test from Crypto.js</div>
+			<div className="crypto-container">
+				<Card />
+			</div>
 		);
   }
 }

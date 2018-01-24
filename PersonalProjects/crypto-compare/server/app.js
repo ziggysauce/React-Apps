@@ -7,9 +7,9 @@ const PORT = 8000;
 
 app.use(bodyparser.urlencoded({extended: true}));
 
-// app.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname, '../app/static/index.html'));
-// });
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../index.html'));
+});
 
 app.use(express.static(path.join(__dirname, '../app')));
 

@@ -41,7 +41,7 @@ class Card extends Component {
 		return (
 			<div className="card-container">
 				<div className="card">
-          <img src="../static/img/btc.png" />
+          <img src="./app/img/btc.png" />
           <div className="coin-data">
             <p>Bitcoin (BTC)</p>
             <p>{this.state.coin[0]['price']}</p>
@@ -49,7 +49,7 @@ class Card extends Component {
           </div>
         </div>
         <div className="card">
-          <img src="../static/img/eth.png" />
+          <img src="./app/img/eth.png" />
           <div className="coin-data">
             <p>Ethereum (ETH)</p>
             <p>{this.state.coin[1]['price']}</p>
@@ -57,7 +57,7 @@ class Card extends Component {
           </div>
         </div>
 				<div className="card">
-          <img src="../static/img/ltc.png" />
+          <img src="./app/img/ltc.png" />
           <div className="coin-data">
             <p>Litecoin (LTC)</p>
             <p>{this.state.coin[2]['price']}</p>
@@ -65,7 +65,7 @@ class Card extends Component {
           </div>
         </div>
 				<div className="card">
-          <img src="../static/img/xrp.png" />
+          <img src="./app/img/xrp.png" />
           <div className="coin-data">
             <p>Ripple (XRP)</p>
             <p>{this.state.coin[3]['price']}</p>
@@ -73,7 +73,7 @@ class Card extends Component {
           </div>
         </div>
 				<div className="card">
-          <img src="../static/img/dash.png" />
+          <img src="./app/img/dash.png" />
           <div className="coin-data">
             <p>DigitalCash (DASH)</p>
             <p>{this.state.coin[4]['price']}</p>
@@ -81,7 +81,7 @@ class Card extends Component {
           </div>
         </div>
 				<div className="card">
-          <img src="../static/img/xmr.png" />
+          <img src="./app/img/xmr.png" />
           <div className="coin-data">
             <p>Monero (XMR)</p>
             <p>{this.state.coin[5]['price']}</p>
@@ -89,7 +89,7 @@ class Card extends Component {
           </div>
         </div>
 				<div className="card">
-          <img src="../static/img/xem.png" />
+          <img src="./app/img/xem.png" />
           <div className="coin-data">
             <p>NEM (XEM)</p>
             <p>{this.state.coin[6]['price']}</p>
@@ -97,7 +97,7 @@ class Card extends Component {
           </div>
         </div>
 				<div className="card">
-          <img src="../static/img/bch.png" />
+          <img src="./app/img/bch.png" />
           <div className="coin-data">
             <p>Bitcoin Cash (BCH)</p>
             <p>{this.state.coin[7]['price']}</p>

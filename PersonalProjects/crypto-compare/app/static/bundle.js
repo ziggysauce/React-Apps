@@ -19034,7 +19034,7 @@ var Card = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'card' },
-          _react2.default.createElement('img', { src: '../static/img/btc.png' }),
+          _react2.default.createElement('img', { src: './app/img/btc.png' }),
           _react2.default.createElement(
             'div',
             { className: 'coin-data' },
@@ -19059,7 +19059,7 @@ var Card = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'card' },
-          _react2.default.createElement('img', { src: '../static/img/eth.png' }),
+          _react2.default.createElement('img', { src: './app/img/eth.png' }),
           _react2.default.createElement(
             'div',
             { className: 'coin-data' },
@@ -19084,7 +19084,7 @@ var Card = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'card' },
-          _react2.default.createElement('img', { src: '../static/img/ltc.png' }),
+          _react2.default.createElement('img', { src: './app/img/ltc.png' }),
           _react2.default.createElement(
             'div',
             { className: 'coin-data' },
@@ -19109,7 +19109,7 @@ var Card = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'card' },
-          _react2.default.createElement('img', { src: '../static/img/xrp.png' }),
+          _react2.default.createElement('img', { src: './app/img/xrp.png' }),
           _react2.default.createElement(
             'div',
             { className: 'coin-data' },
@@ -19134,7 +19134,7 @@ var Card = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'card' },
-          _react2.default.createElement('img', { src: '../static/img/dash.png' }),
+          _react2.default.createElement('img', { src: './app/img/dash.png' }),
           _react2.default.createElement(
             'div',
             { className: 'coin-data' },
@@ -19159,7 +19159,7 @@ var Card = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'card' },
-          _react2.default.createElement('img', { src: '../static/img/xmr.png' }),
+          _react2.default.createElement('img', { src: './app/img/xmr.png' }),
           _react2.default.createElement(
             'div',
             { className: 'coin-data' },
@@ -19184,7 +19184,7 @@ var Card = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'card' },
-          _react2.default.createElement('img', { src: '../static/img/xem.png' }),
+          _react2.default.createElement('img', { src: './app/img/xem.png' }),
           _react2.default.createElement(
             'div',
             { className: 'coin-data' },
@@ -19209,7 +19209,7 @@ var Card = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'card' },
-          _react2.default.createElement('img', { src: '../static/img/bch.png' }),
+          _react2.default.createElement('img', { src: './app/img/bch.png' }),
           _react2.default.createElement(
             'div',
             { className: 'coin-data' },

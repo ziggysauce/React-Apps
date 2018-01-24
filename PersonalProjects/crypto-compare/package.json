@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server/app.js & webpack -w",
-    "compile": "webpack -w"
+    "compile": "webpack -w",
+    "build": "react-scripts build"
   },
   "author": "Dan Nguyen",
   "license": "MIT",

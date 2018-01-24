@@ -18848,7 +18848,7 @@ exports = module.exports = __webpack_require__(8)(false);
 
 
 // module
-exports.push([module.i, "html, body {\n  padding: 0;\n  margin: 0;\n  width: 100%;\n  height: 100%;\n  background: #244b7b; }\n\n.app-container {\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 125px;\n  font-family: 'Montserrat', sans-serif; }\n  .app-container h1 {\n    width: 60vw;\n    padding: 10px;\n    color: #F8F8F8; }\n  .app-container h4 {\n    width: 60vw;\n    padding: 0px 10px;\n    margin-top: -20px;\n    color: #8acbff; }\n  .app-container p {\n    color: #F8F8F8; }\n    .app-container p a {\n      color: #fff399;\n      text-decoration: none; }\n      .app-container p a:hover {\n        text-decoration: underline; }\n\n@media (max-width: 500px) {\n  .app-container {\n    margin-bottom: 500px; } }\n", ""]);
+exports.push([module.i, "html, body {\n  padding: 0;\n  margin: 0;\n  width: 100%;\n  height: 100%;\n  background: #244b7b; }\n\n.app-container {\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  padding-bottom: 125px;\n  font-family: 'Montserrat', sans-serif; }\n  .app-container h1 {\n    width: 70vw;\n    padding: 10px;\n    margin-left: 20px;\n    color: #F8F8F8; }\n  .app-container h4 {\n    width: 70vw;\n    padding: 0px 10px;\n    margin-top: -20px;\n    margin-left: 20px;\n    color: #8acbff; }\n  .app-container p {\n    color: #F8F8F8; }\n    .app-container p a {\n      color: #fff399;\n      text-decoration: none; }\n      .app-container p a:hover {\n        text-decoration: underline; }\n", ""]);
 
 // exports
 
@@ -19282,7 +19282,7 @@ exports = module.exports = __webpack_require__(8)(false);
 
 
 // module
-exports.push([module.i, ".card-container {\n  max-width: 60vw;\n  height: 100%;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: center; }\n\n.card {\n  border: 1px solid #102a49;\n  box-sizing: border-box;\n  box-shadow: 2px 2px 10px #102a49;\n  background: #102a49;\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-items: center;\n  padding-left: 10px;\n  flex: 1 1 45%;\n  min-width: 300px;\n  margin: 10px; }\n\n.coin-data {\n  display: flex;\n  flex-direction: column;\n  margin-left: 50px; }\n  .coin-data p:nth-of-type(2) {\n    font-size: 2em;\n    margin: 0; }\n\n.pos {\n  color: #7cd382 !important; }\n\n.neg {\n  color: #e86666 !important; }\n\nimg {\n  max-width: 75px;\n  padding-left: 20px;\n  padding-right: 0; }\n", ""]);
+exports.push([module.i, ".card-container {\n  max-width: 60vw;\n  height: 100%;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: center; }\n\n.card {\n  border: 1px solid #102a49;\n  box-sizing: border-box;\n  box-shadow: 2px 2px 10px #102a49;\n  background: #102a49;\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-items: center;\n  padding-left: 10px;\n  flex: 1 1 45%;\n  min-width: 300px;\n  margin: 10px;\n  transition: 0.5s; }\n  .card:hover {\n    transform: translateY(-5px);\n    transition: 0.3s; }\n\n.coin-data {\n  display: flex;\n  flex-direction: column;\n  margin-left: 50px; }\n  .coin-data p:nth-of-type(2) {\n    font-size: 2em;\n    margin: 0; }\n\n.pos {\n  color: #7cd382 !important; }\n\n.neg {\n  color: #e86666 !important; }\n\nimg {\n  max-width: 75px;\n  padding-left: 20px;\n  padding-right: 0; }\n", ""]);
 
 // exports
 

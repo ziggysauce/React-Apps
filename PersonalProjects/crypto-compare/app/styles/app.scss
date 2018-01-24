@@ -53,3 +53,9 @@ html, body {
     }
   }
 }
+
+@media (max-width: 500px) {
+  .app-container {
+    margin-bottom: 500px;
+  }
+}

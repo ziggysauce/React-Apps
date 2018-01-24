@@ -19001,7 +19001,6 @@ var Card = function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      console.log('componentmount is reached');
       fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,LTC,XRP,DASH,XMR,XEM,BCH&tsyms=USD').then(function (results) {
         return results.json();
       }).then(function (data) {
@@ -19035,11 +19034,7 @@ var Card = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'card' },
-          _react2.default.createElement(
-            'p',
-            null,
-            'Icon'
-          ),
+          _react2.default.createElement('img', { src: '../static/img/btc.png' }),
           _react2.default.createElement(
             'div',
             { className: 'coin-data' },
@@ -19055,7 +19050,7 @@ var Card = function (_Component) {
             ),
             _react2.default.createElement(
               'p',
-              null,
+              { className: "" + (Number(this.state.coin[0]['percent']) >= 0 ? "pos" : "neg") },
               this.state.coin[0]['percent'],
               '%'
             )
@@ -19064,11 +19059,7 @@ var Card = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'card' },
-          _react2.default.createElement(
-            'p',
-            null,
-            'Icon'
-          ),
+          _react2.default.createElement('img', { src: '../static/img/eth.png' }),
           _react2.default.createElement(
             'div',
             { className: 'coin-data' },
@@ -19084,7 +19075,7 @@ var Card = function (_Component) {
             ),
             _react2.default.createElement(
               'p',
-              null,
+              { className: "" + (Number(this.state.coin[1]['percent']) >= 0 ? "pos" : "neg") },
               this.state.coin[1]['percent'],
               '%'
             )
@@ -19093,11 +19084,7 @@ var Card = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'card' },
-          _react2.default.createElement(
-            'p',
-            null,
-            'Icon'
-          ),
+          _react2.default.createElement('img', { src: '../static/img/ltc.png' }),
           _react2.default.createElement(
             'div',
             { className: 'coin-data' },
@@ -19113,7 +19100,7 @@ var Card = function (_Component) {
             ),
             _react2.default.createElement(
               'p',
-              null,
+              { className: "" + (Number(this.state.coin[2]['percent']) >= 0 ? "pos" : "neg") },
               this.state.coin[2]['percent'],
               '%'
             )
@@ -19122,11 +19109,7 @@ var Card = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'card' },
-          _react2.default.createElement(
-            'p',
-            null,
-            'Icon'
-          ),
+          _react2.default.createElement('img', { src: '../static/img/xrp.png' }),
           _react2.default.createElement(
             'div',
             { className: 'coin-data' },
@@ -19142,7 +19125,7 @@ var Card = function (_Component) {
             ),
             _react2.default.createElement(
               'p',
-              null,
+              { className: "" + (Number(this.state.coin[3]['percent']) >= 0 ? "pos" : "neg") },
               this.state.coin[3]['percent'],
               '%'
             )
@@ -19151,11 +19134,7 @@ var Card = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'card' },
-          _react2.default.createElement(
-            'p',
-            null,
-            'Icon'
-          ),
+          _react2.default.createElement('img', { src: '../static/img/dash.png' }),
           _react2.default.createElement(
             'div',
             { className: 'coin-data' },
@@ -19171,7 +19150,7 @@ var Card = function (_Component) {
             ),
             _react2.default.createElement(
               'p',
-              null,
+              { className: "" + (Number(this.state.coin[4]['percent']) >= 0 ? "pos" : "neg") },
               this.state.coin[4]['percent'],
               '%'
             )
@@ -19180,11 +19159,7 @@ var Card = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'card' },
-          _react2.default.createElement(
-            'p',
-            null,
-            'Icon'
-          ),
+          _react2.default.createElement('img', { src: '../static/img/xmr.png' }),
           _react2.default.createElement(
             'div',
             { className: 'coin-data' },
@@ -19200,7 +19175,7 @@ var Card = function (_Component) {
             ),
             _react2.default.createElement(
               'p',
-              null,
+              { className: "" + (Number(this.state.coin[5]['percent']) >= 0 ? "pos" : "neg") },
               this.state.coin[5]['percent'],
               '%'
             )
@@ -19209,11 +19184,7 @@ var Card = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'card' },
-          _react2.default.createElement(
-            'p',
-            null,
-            'Icon'
-          ),
+          _react2.default.createElement('img', { src: '../static/img/xem.png' }),
           _react2.default.createElement(
             'div',
             { className: 'coin-data' },
@@ -19229,7 +19200,7 @@ var Card = function (_Component) {
             ),
             _react2.default.createElement(
               'p',
-              null,
+              { className: "" + (Number(this.state.coin[6]['percent']) >= 0 ? "pos" : "neg") },
               this.state.coin[6]['percent'],
               '%'
             )
@@ -19238,11 +19209,7 @@ var Card = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'card' },
-          _react2.default.createElement(
-            'p',
-            null,
-            'Icon'
-          ),
+          _react2.default.createElement('img', { src: '../static/img/bch.png' }),
           _react2.default.createElement(
             'div',
             { className: 'coin-data' },
@@ -19258,7 +19225,7 @@ var Card = function (_Component) {
             ),
             _react2.default.createElement(
               'p',
-              null,
+              { className: "" + (Number(this.state.coin[7]['percent']) >= 0 ? "pos" : "neg") },
               this.state.coin[7]['percent'],
               '%'
             )
@@ -19315,7 +19282,7 @@ exports = module.exports = __webpack_require__(8)(false);
 
 
 // module
-exports.push([module.i, ".card-container {\n  max-width: 60vw;\n  height: 100%;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: center; }\n\n.card {\n  border: 1px solid #102a49;\n  box-sizing: border-box;\n  box-shadow: 2px 2px 10px #102a49;\n  background: #102a49;\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-items: center;\n  padding-left: 10px;\n  flex: 1 1 45%;\n  min-width: 250px;\n  margin: 10px; }\n\n.coin-data {\n  display: flex;\n  flex-direction: column;\n  margin-left: 50px; }\n  .coin-data p:nth-of-type(2) {\n    font-size: 2em;\n    margin: 0; }\n", ""]);
+exports.push([module.i, ".card-container {\n  max-width: 60vw;\n  height: 100%;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: center; }\n\n.card {\n  border: 1px solid #102a49;\n  box-sizing: border-box;\n  box-shadow: 2px 2px 10px #102a49;\n  background: #102a49;\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-items: center;\n  padding-left: 10px;\n  flex: 1 1 45%;\n  min-width: 300px;\n  margin: 10px; }\n\n.coin-data {\n  display: flex;\n  flex-direction: column;\n  margin-left: 50px; }\n  .coin-data p:nth-of-type(2) {\n    font-size: 2em;\n    margin: 0; }\n\n.pos {\n  color: #7cd382 !important; }\n\n.neg {\n  color: #e86666 !important; }\n\nimg {\n  max-width: 75px;\n  padding-left: 20px;\n  padding-right: 0; }\n", ""]);
 
 // exports
 

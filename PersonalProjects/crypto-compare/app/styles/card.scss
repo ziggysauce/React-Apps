@@ -26,7 +26,7 @@ $negative: #e86666;
   padding-left: 10px;
   flex: 1 1 45%;
 
-  min-width: 250px;
+  min-width: 300px;
   margin: 10px;
 }
 
@@ -39,4 +39,18 @@ $negative: #e86666;
     font-size: 2em;
     margin: 0;
   }
+}
+
+.pos {
+  color: $positive !important;
+}
+
+.neg {
+  color: $negative !important;
+}
+
+img {
+  max-width: 75px;
+  padding-left: 20px;
+  padding-right: 0;
 }

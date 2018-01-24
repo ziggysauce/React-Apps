@@ -21,7 +21,7 @@ html, body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 125px;
+  padding-bottom: 125px;
 
   font-family: 'Montserrat', sans-serif;
 
@@ -51,11 +51,5 @@ html, body {
         text-decoration: underline;
       }
     }
-  }
-}
-
-@media (max-width: 500px) {
-  .app-container {
-    margin-bottom: 500px;
   }
 }

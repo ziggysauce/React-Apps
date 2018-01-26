@@ -1,0 +1,20 @@
+$dark-grey: #141414;
+$medium-grey: #555;
+$light-grey: #F8F8F8;
+
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.app-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 125px;
+  font-family: 'Montserrat', sans-serif;
+}

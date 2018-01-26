@@ -28,6 +28,7 @@ This repository is dedicated to learning and practicing with React by creating v
 ### Backend
 * Node.js (v9+)
 * NPM
+* Express
 * ESLint (Airbnb rules)
 
 

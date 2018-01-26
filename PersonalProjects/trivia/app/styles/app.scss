@@ -10,11 +10,17 @@ html, body {
 }
 
 .app-container {
+  border: 2px solid pink;
+
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding-bottom: 125px;
+  padding-bottom: 150px;
+
+  // height: calc(100vh - 125px);
+  width: 100%;
+
   font-family: 'Montserrat', sans-serif;
 }

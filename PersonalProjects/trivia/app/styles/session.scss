@@ -1,0 +1,50 @@
+.session-section {
+  border: 2px solid green;
+
+  .session-container {
+    border: 2px solid cyan;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .progress {
+    border: 2px solid yellow;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px 30px;
+  }
+
+  .record {
+    border: 2px solid lightsalmon;
+
+    display: flex;
+    flex-direction: row;
+  }
+
+  .correct, .incorrect {
+    display: flex;
+    flex-direction: column;
+    
+    p {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .correct {
+    border: 2px solid plum;
+  }
+
+  .incorrect {
+    border: 2px solid royalblue;
+  }
+
+  .reset {
+    border: 2px solid maroon;
+  }
+}

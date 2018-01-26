@@ -1,26 +1,38 @@
 .session-section {
-  border: 2px solid green;
+  // border: 2px solid green;
 
   .session-container {
-    border: 2px solid cyan;
+    // border: 2px solid cyan;
 
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+
+    width: 70vw;
+    padding-top: 30px;
   }
 
   .progress {
-    border: 2px solid yellow;
+    // border: 2px solid yellow;
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    padding: 10px 30px;
+    padding: 0px 30px;
+
+    h3 {
+      margin: 0;
+      font-size: 1.5em;
+      text-decoration: underline;
+    }
   }
 
   .record {
-    border: 2px solid lightsalmon;
+    // border: 2px solid lightsalmon;
 
     display: flex;
     flex-direction: row;
@@ -29,22 +41,64 @@
   .correct, .incorrect {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 10px 20px;
+
+    p:first-of-type {
+      font-weight: 700;
+      text-transform: uppercase;
+    }
     
     p {
-      padding: 0;
+      padding: 5px;
       margin: 0;
     }
   }
 
   .correct {
-    border: 2px solid plum;
+    // border: 2px solid plum;
+    p:first-of-type {
+      color: #6ab04c;
+    }
   }
 
   .incorrect {
-    border: 2px solid royalblue;
+    // border: 2px solid royalblue;
+    p:first-of-type {
+      color: #eb4d4b;
+    }
   }
 
   .reset {
-    border: 2px solid maroon;
+    // border: 2px solid maroon;
+
+    button {
+      outline: none;
+      border: none;
+      border-bottom: 2px solid #914948;
+      border-radius: 3px;
+      background: linear-gradient(#ff7979, #eb4d4b);
+      color: #FFF;
+      transition: 0.3s;
+      box-shadow: 2px 2px 2px rgb(31, 12, 12);
+
+      font-size: 1em;
+      padding: 10px 20px;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      &:hover {
+        transition: 0.3s;
+        background: linear-gradient(#eb5d5d, #d8413e);
+      }
+
+      &:active {
+        transform: translateY(5px);
+        border-bottom: 1px solid #914948;
+        box-shadow: 1px 1px 1px rgb(31, 12, 12);
+      }
+    }
   }
 }

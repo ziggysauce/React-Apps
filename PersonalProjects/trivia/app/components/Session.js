@@ -13,20 +13,20 @@ class Session extends Component {
 			<div className="session-section">
         <div className="session-container">
           <div className="progress">
-            <div>Current Progress</div>
+            <h3>Current Progress</h3>
             <div className="record">
               <div className="correct">
-                <p>Correct: </p>
+                <p>Correct</p>
                 <p>##</p>
               </div>
               <div className="incorrect">
-                <p>Incorrect: </p>
+                <p>Incorrect</p>
                 <p>##</p>
               </div>
             </div>
           </div>
           <div className="reset">
-            <button>Restart</button>
+            <button>Reset</button>
           </div>
         </div>
       </div>

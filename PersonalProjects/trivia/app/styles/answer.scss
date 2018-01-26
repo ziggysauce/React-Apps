@@ -1,21 +1,36 @@
 .answer-section {
-  border: 2px solid orange;
+  // border: 2px solid orange;
 
   .choices-container {
-    border: 2px solid purple;
+    // border: 2px solid purple;
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     // flex: 1 2 45%;
 
-    width: 60vw;
+    width: 90vw;
   }
 
   button {
-    border: 2px solid blue;
-    width: 45%;
-    min-width: 30em;
-    height: 10em;;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    background: rgba(255,255,255,0.7);
+    box-shadow: 1px 1px 10px 1px rgb(121, 121, 121);
+    color: #000;
+    width: 35%;
+    min-width: 22em;
+    height: 5em;
+    margin: 10px;
+    padding: 0;
+    cursor: pointer;
+    font-size: 1em;
+    transition: 0.3s;
+
+    &:hover {
+      box-shadow: 5px 5px 10px 1px rgb(121, 121, 121);
+      transform: translateY(-5px);
+      transition: 0.3s;
+    }
   }
 }

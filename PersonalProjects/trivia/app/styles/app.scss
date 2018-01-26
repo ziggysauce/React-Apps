@@ -9,8 +9,14 @@ html, body {
   height: 100%;
 }
 
+body {
+  background: url('/assets/school.png');
+  // background-repeat: repeat;
+  // background-size: contain;
+}
+
 .app-container {
-  border: 2px solid pink;
+  // border: 2px solid pink;
 
   box-sizing: border-box;
   display: flex;
@@ -23,4 +29,6 @@ html, body {
   width: 100%;
 
   font-family: 'Montserrat', sans-serif;
+
+
 }

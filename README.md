@@ -23,7 +23,7 @@ This repository is dedicated to learning and practicing with React by creating v
 * Webpack
 * Babel.js
 * ESLint (Airbnb rules)
-* Sass
+* SCSS
 
 ### Backend
 * Node.js (v9+)

@@ -16,7 +16,7 @@
     border: 1px solid transparent;
     border-radius: 3px;
     background: rgba(255,255,255,0.7);
-    box-shadow: 1px 1px 10px 1px rgb(121, 121, 121);
+    box-shadow: 1px 1px 10px 1px rgb(150, 143, 130);
     color: #000;
     width: 35%;
     min-width: 22em;
@@ -28,7 +28,7 @@
     transition: 0.3s;
 
     &:hover {
-      box-shadow: 5px 5px 10px 1px rgb(121, 121, 121);
+      box-shadow: 5px 5px 10px 1px rgb(150, 143, 130);
       transform: translateY(-5px);
       transition: 0.3s;
     }

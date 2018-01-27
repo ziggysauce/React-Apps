@@ -11,7 +11,7 @@ class Title extends Component {
   render() {
 		return (
 			<div className="trivia-section">
-        <h1>Trivia</h1>
+        <h1>Final Answer?</h1>
       </div>
 		);
   }

@@ -16,9 +16,11 @@ class App extends Component {
       triviaData: [{
         'category': '',
         'question': {__html: ''},
-        'choices': [],
-        'correct': '',
+        'choices': [{__html: ''}, {__html: ''}, {__html: ''}, {__html: ''}],
+        'correct': {__html: ''},
       }],
+      correct: 0,
+      incorrect: 0,
     };
   }
 
@@ -30,24 +32,24 @@ class App extends Component {
         'category': triviaData.category,
         'question': {__html: triviaData.question},
         'choices': [
-          triviaData.correct_answer,
-          triviaData.incorrect_answers[0],
-          triviaData.incorrect_answers[1],
-          triviaData.incorrect_answers[2]
+          {__html: triviaData.correct_answer},
+          {__html: triviaData.incorrect_answers[0]},
+          {__html: triviaData.incorrect_answers[1]},
+          {__html: triviaData.incorrect_answers[2]}
         ],
-        'correct': triviaData.correct_answer
+        'correct': {__html: triviaData.correct_answer}
       }];
 
       // console.log('first: ', data[0].choices);
 
       let randomize = data[0].choices;
       let position = randomize.length, temp, random;
-      // While there remain elements to shuffle...
+      // While there are elements to shuffle...
       while (0 !== position) {
-        // Pick a remaining element...
+        // Pick a remaining element
         random = Math.floor(Math.random() * position);
         position -= 1;
-        // And swap it with the current element.
+        // Swap it with the current element.
         temp = randomize[position];
         randomize[position] = randomize[random];
         randomize[random] = temp;
@@ -69,9 +71,9 @@ class App extends Component {
     return(
       <div className="app-container">
         <Title />
-        <Ask data={this.state.triviaData} />
-        <Answer data={this.state.triviaData} />
-        <Session />
+        <Ask data={this.state} />
+        <Answer data={this.state} />
+        <Session results={this.state}/>
         <Footer />
       </div>
     );

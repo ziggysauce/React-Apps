@@ -23,7 +23,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 150px;
+  padding-bottom: 125px;
+  overflow-x: hidden;
+  overflow-y: auto;
 
   // height: calc(100vh - 125px);
   width: 100%;

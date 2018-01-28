@@ -9,6 +9,8 @@ class Session extends Component {
 	}
 	
   render() {
+    console.log('session data: ', this.props.results);
+
 		return (
 			<div className="session-section">
         <div className="session-container">
@@ -17,11 +19,11 @@ class Session extends Component {
             <div className="record">
               <div className="correct">
                 <p>Correct</p>
-                <p>##</p>
+                <p>{this.props.results.correct}</p>
               </div>
               <div className="incorrect">
                 <p>Incorrect</p>
-                <p>##</p>
+                <p>{this.props.results.incorrect}</p>
               </div>
             </div>
           </div>

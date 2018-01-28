@@ -15,9 +15,9 @@ class Ask extends Component {
 			<div className="question-section">
         <div>
           <h3>Category</h3>
-          <p>{this.props.data[0].category}</p>
+          <p>{this.props.data.triviaData[0].category}</p>
           <h2>Question</h2>
-          <p dangerouslySetInnerHTML={this.props.data[0].question}></p>
+          <p dangerouslySetInnerHTML={this.props.data.triviaData[0].question}></p>
           {/* <p>{this.props.data[0].question}</p> */}
         </div>
       </div>

@@ -9,8 +9,6 @@ class Ask extends Component {
   }
 	
   render() {
-    // console.log(this.props.data);
-
 		return (
 			<div className="question-section">
         <div>

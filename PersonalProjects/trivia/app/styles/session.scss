@@ -58,22 +58,18 @@
   }
 
   .correct {
-    // border: 2px solid plum;
     p:first-of-type {
       color: #6ab04c;
     }
   }
 
   .incorrect {
-    // border: 2px solid royalblue;
     p:first-of-type {
       color: #eb4d4b;
     }
   }
 
   .reset {
-    // border: 2px solid maroon;
-
     button {
       outline: none;
       border: none;

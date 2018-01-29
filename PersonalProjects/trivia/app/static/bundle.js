@@ -19475,6 +19475,7 @@ var App = function (_Component) {
 
     _this.updateCorrect = _this.updateCorrect.bind(_this);
     _this.updateIncorrect = _this.updateIncorrect.bind(_this);
+    _this.resetSession = _this.resetSession.bind(_this);
     return _this;
   }
 
@@ -19492,8 +19493,6 @@ var App = function (_Component) {
           'correct': { __html: triviaData.correct_answer }
         }];
 
-        // console.log('first: ', data[0].choices);
-
         var randomize = data[0].choices;
         var position = randomize.length,
             temp = void 0,
@@ -19508,7 +19507,6 @@ var App = function (_Component) {
           randomize[position] = randomize[random];
           randomize[random] = temp;
         }
-        // console.log('new: ', randomize);
         data[0].choices = randomize;
 
         _this2.setState({
@@ -19523,35 +19521,6 @@ var App = function (_Component) {
     value: function componentDidMount() {
       this.getData();
     }
-
-    // checkAnswer(e) {
-    //   const clicked = e.target.innerHTML;
-    //   const answer = this.state.triviaData[0].correct.__html;
-
-
-    //   if (clicked === answer) {
-    //     e.target.className = 'highlightCorrect';
-
-    //     this.setState((prevState, props) => ({
-    //       // triviaData: this.state.triviaData,
-    //       correct: this.state.correct + 1,
-    //       // incorrect: this.state.incorrect,
-    //     }));
-    //   } else {
-    //     e.target.className = 'highlightIncorrect';
-
-    //     this.setState((prevState, props) => ({
-    //       // triviaData: this.state.triviaData,
-    //       // correct: this.state.correct,
-    //       incorrect: this.state.incorrect + 1,
-    //     }));
-    //   }
-
-    //   setTimeout(() => {
-    //     this.getData();
-    //   }, 500);
-    // }
-
   }, {
     key: 'updateCorrect',
     value: function updateCorrect() {
@@ -19565,7 +19534,7 @@ var App = function (_Component) {
 
       setTimeout(function () {
         _this3.getData();
-      }, 500);
+      }, 1000);
     }
   }, {
     key: 'updateIncorrect',
@@ -19580,21 +19549,28 @@ var App = function (_Component) {
 
       setTimeout(function () {
         _this4.getData();
-      }, 500);
+      }, 1000);
+    }
+  }, {
+    key: 'resetSession',
+    value: function resetSession() {
+      this.setState(function (prevState, props) {
+        return {
+          correct: 0,
+          incorrect: 0
+        };
+      });
     }
   }, {
     key: 'render',
     value: function render() {
-      // console.log(this.state.triviaData);
-      // console.log('parent hit');
-
       return _react2.default.createElement(
         'div',
         { className: 'app-container' },
         _react2.default.createElement(_Title2.default, null),
         _react2.default.createElement(_Ask2.default, { data: this.state }),
         _react2.default.createElement(_Answer2.default, { data: this.state, updateCorrect: this.updateCorrect.bind(this), updateIncorrect: this.updateIncorrect.bind(this) }),
-        _react2.default.createElement(_Session2.default, { results: this.state }),
+        _react2.default.createElement(_Session2.default, { results: this.state, resetSession: this.resetSession.bind(this) }),
         _react2.default.createElement(_Footer2.default, null)
       );
     }
@@ -20793,8 +20769,6 @@ var Ask = function (_Component) {
   _createClass(Ask, [{
     key: 'render',
     value: function render() {
-      // console.log(this.props.data);
-
       return _react2.default.createElement(
         'div',
         { className: 'question-section' },
@@ -20920,10 +20894,28 @@ var Answer = function (_Component) {
   }
 
   _createClass(Answer, [{
+    key: 'showAnswer',
+    value: function showAnswer() {
+      var choices = document.querySelectorAll('.choices-container button');
+      var answer = this.props.data.triviaData[0].correct.__html;
+
+      choices.forEach(function (e) {
+        if (e.innerHTML === answer) {
+          e.className = 'highlightCorrect';
+
+          setTimeout(function () {
+            e.className = 'neutral';
+          }, 900);
+        }
+      });
+    }
+  }, {
     key: 'checkAnswer',
     value: function checkAnswer(e) {
       var clicked = e.target;
       var answer = this.props.data.triviaData[0].correct.__html;
+
+      this.showAnswer();
 
       if (clicked.innerHTML === answer) {
         e.target.className = 'highlightCorrect';
@@ -20931,25 +20923,20 @@ var Answer = function (_Component) {
 
         setTimeout(function () {
           clicked.className = 'neutral';
-        }, 500);
+        }, 900);
       } else {
         e.target.className = 'highlightIncorrect';
         this.props.updateIncorrect();
 
         setTimeout(function () {
           clicked.className = 'neutral';
-        }, 500);
+        }, 900);
       }
     }
   }, {
     key: 'render',
     value: function render() {
       var _this2 = this;
-
-      // console.log(this.props.data.triviaData[0].choices);
-      // console.log('answer: ', this.props.data.triviaData[0].correct.__html);
-      // console.log('new state: ', this.state);
-      // console.log('answer reached');
 
       return _react2.default.createElement(
         'div',
@@ -21019,7 +21006,7 @@ exports = module.exports = __webpack_require__(5)(false);
 
 
 // module
-exports.push([module.i, ".answer-section .choices-container {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  flex-wrap: wrap;\n  width: 90vw; }\n\n.answer-section button {\n  outline: none;\n  border: 1px solid transparent;\n  border-radius: 3px;\n  background: rgba(255, 255, 255, 0.7);\n  box-shadow: 1px 1px 10px 1px #968f82;\n  color: #000;\n  width: 35%;\n  min-width: 22em;\n  height: 5em;\n  margin: 10px;\n  padding: 0;\n  cursor: pointer;\n  font-size: 1em;\n  transition: 0.3s; }\n  .answer-section button:hover {\n    box-shadow: 5px 5px 10px 1px #968f82;\n    transform: translateY(-5px);\n    transition: 0.3s; }\n  .answer-section button:active {\n    background: rgba(65, 107, 155, 0.5);\n    color: #FFF; }\n\n.answer-section .neutral {\n  background: rgba(255, 255, 255, 0.7) !important; }\n\n.answer-section .highlightCorrect {\n  background: #6ab04c; }\n\n.answer-section .highlightIncorrect {\n  background: #eb4d4b; }\n", ""]);
+exports.push([module.i, ".answer-section .choices-container {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  flex-wrap: wrap;\n  width: 90vw; }\n\n.answer-section button {\n  outline: none;\n  border: 1px solid transparent;\n  border-radius: 3px;\n  background: rgba(255, 255, 255, 0.7);\n  box-shadow: 1px 1px 10px 1px #968f82;\n  color: #000;\n  width: 35%;\n  min-width: 22em;\n  height: 5em;\n  margin: 10px;\n  padding: 0;\n  cursor: pointer;\n  font-size: 1em;\n  transition: 0.3s; }\n  .answer-section button:hover {\n    box-shadow: 5px 5px 10px 1px #968f82;\n    transform: translateY(-5px);\n    transition: 0.3s; }\n  .answer-section button:active {\n    background: rgba(65, 107, 155, 0.5);\n    color: #FFF; }\n\n.answer-section .neutral {\n  background: rgba(255, 255, 255, 0.7) !important; }\n\n.answer-section .highlightCorrect {\n  background: #6ab04c;\n  color: #fff; }\n\n.answer-section .highlightIncorrect {\n  background: #eb4d4b;\n  color: #fff; }\n", ""]);
 
 // exports
 
@@ -21072,7 +21059,7 @@ var Session = function (_Component) {
   _createClass(Session, [{
     key: 'render',
     value: function render() {
-      // console.log('session hit');
+      var _this2 = this;
 
       return _react2.default.createElement(
         'div',
@@ -21126,7 +21113,9 @@ var Session = function (_Component) {
             { className: 'reset' },
             _react2.default.createElement(
               'button',
-              null,
+              { onClick: function onClick(e) {
+                  return _this2.props.resetSession();
+                } },
               'Reset'
             )
           )

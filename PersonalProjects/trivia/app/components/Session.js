@@ -5,12 +5,10 @@ import styles from '../styles/session.scss';
 class Session extends Component {
   constructor() {
 		super();
-		this.state = {};
+    this.state = {};    
 	}
 	
   render() {
-    // console.log('session hit');
-
 		return (
 			<div className="session-section">
         <div className="session-container">
@@ -28,7 +26,7 @@ class Session extends Component {
             </div>
           </div>
           <div className="reset">
-            <button>Reset</button>
+            <button onClick={e => this.props.resetSession()}>Reset</button>
           </div>
         </div>
       </div>

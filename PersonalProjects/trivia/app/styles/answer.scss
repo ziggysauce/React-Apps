@@ -1,14 +1,9 @@
 .answer-section {
-  // border: 2px solid orange;
-
   .choices-container {
-    // border: 2px solid purple;
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    // flex: 1 2 45%;
-
     width: 90vw;
   }
 
@@ -46,9 +41,11 @@
 
   .highlightCorrect {
     background: #6ab04c;
+    color: #fff;
   }
 
   .highlightIncorrect {
     background: #eb4d4b;
+    color: #fff;
   }
 }

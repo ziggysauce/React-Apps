@@ -5,37 +5,29 @@ import styles from '../styles/answer.scss';
 class Answer extends Component {
   constructor(props) {
 		super(props);
-    this.state = {
-      // triviaData: this.props.data.triviaData,
-      // correct: this.props.data.correct,
-      // incorrect: this.props.data.incorrect,
-    };
-    
+    this.state = {};    
+
     this.checkAnswer = this.checkAnswer.bind(this);
   }
 
   checkAnswer(e) {
-    const clicked = e.target.innerHTML;
+    const clicked = e.target;
     const answer = this.props.data.triviaData[0].correct.__html;
 
-    if (clicked === answer) {
+    if (clicked.innerHTML === answer) {
       e.target.className = 'highlightCorrect';
+      this.props.updateCorrect();
 
-      this.setState((prevState, props) => ({
-        triviaData: this.props.data.triviaData[0],
-        correct: this.props.data.correct + 1,
-        incorrect: this.props.data.incorrect,
-      }));
-
-      console.log(this.state);
+      setTimeout(() => {
+        clicked.className = 'neutral';
+      }, 500);
     } else {
       e.target.className = 'highlightIncorrect';
+      this.props.updateIncorrect();
 
-      this.setState((prevState, props) => ({
-        triviaData: this.props.data.triviaData[0],
-        correct: this.props.data.correct,
-        incorrect: this.props.data.incorrect + 1,
-      }));
+      setTimeout(() => {
+        clicked.className = 'neutral';
+      }, 500);
     }
   }
 
@@ -43,6 +35,7 @@ class Answer extends Component {
     // console.log(this.props.data.triviaData[0].choices);
     // console.log('answer: ', this.props.data.triviaData[0].correct.__html);
     // console.log('new state: ', this.state);
+    // console.log('answer reached');
 
 		return (
 			<div className="answer-section">

@@ -22,9 +22,12 @@ class App extends Component {
       correct: 0,
       incorrect: 0,
     };
+
+    this.updateCorrect = this.updateCorrect.bind(this);
+    this.updateIncorrect = this.updateIncorrect.bind(this);
   }
 
-  componentWillMount() {
+  getData() {
     axios.get('https://opentdb.com/api.php?amount=1&type=multiple')
     .then((results) => {
       const triviaData = results.data.results[0];
@@ -65,14 +68,67 @@ class App extends Component {
     });
   }
 
+  componentDidMount() {
+    this.getData()
+  }
+
+  // checkAnswer(e) {
+  //   const clicked = e.target.innerHTML;
+  //   const answer = this.state.triviaData[0].correct.__html;
+
+
+  //   if (clicked === answer) {
+  //     e.target.className = 'highlightCorrect';
+
+  //     this.setState((prevState, props) => ({
+  //       // triviaData: this.state.triviaData,
+  //       correct: this.state.correct + 1,
+  //       // incorrect: this.state.incorrect,
+  //     }));
+  //   } else {
+  //     e.target.className = 'highlightIncorrect';
+
+  //     this.setState((prevState, props) => ({
+  //       // triviaData: this.state.triviaData,
+  //       // correct: this.state.correct,
+  //       incorrect: this.state.incorrect + 1,
+  //     }));
+  //   }
+
+  //   setTimeout(() => {
+  //     this.getData();
+  //   }, 500);
+  // }
+
+  updateCorrect() {
+    this.setState((prevState, props) => ({
+      correct: this.state.correct + 1,
+    }));
+
+    setTimeout(() => {
+      this.getData();
+    }, 500);
+  }
+
+  updateIncorrect() {
+    this.setState((prevState, props) => ({
+      incorrect: this.state.incorrect + 1,
+    }));
+
+    setTimeout(() => {
+      this.getData();
+    }, 500);
+  }
+
   render() {
     // console.log(this.state.triviaData);
+    // console.log('parent hit');
 
     return(
       <div className="app-container">
         <Title />
         <Ask data={this.state} />
-        <Answer data={this.state} />
+        <Answer data={this.state} updateCorrect={this.updateCorrect.bind(this)} updateIncorrect={this.updateIncorrect.bind(this)} />
         <Session results={this.state}/>
         <Footer />
       </div>

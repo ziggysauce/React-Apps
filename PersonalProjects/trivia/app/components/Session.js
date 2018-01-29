@@ -9,7 +9,7 @@ class Session extends Component {
 	}
 	
   render() {
-    console.log('session data: ', this.props.results);
+    // console.log('session hit');
 
 		return (
 			<div className="session-section">

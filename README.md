@@ -8,7 +8,7 @@
 
 
 ## About
-This repository is dedicated to learning and practicing with React by creating various projects. Many of them are part of the [FCC](https://www.freecodecamp.org/) curriculum while others are just personal side project ideas. Each project will include a README.md file with information regarding the code as well as links to live demos.
+This repository is dedicated to learning and practicing with React by creating various projects. Many of them are part of the [FCC](https://www.freecodecamp.org/) curriculum while others are just personal side project ideas. Each project will include a README.md file with information regarding the code (some will include Medium articles with further details about the project) as well as links to live demos. If you're interested in coding these projects yourself, feel free to fork this repo!  
 
 
 ## Contributing

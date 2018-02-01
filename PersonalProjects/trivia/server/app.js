@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, '../app')));
 
 app.listen(PORT, (err) => {
-  if (err) { console.log('There was an error connectin to the server: ', err); }
+  if (err) { console.log('There was an error connecting to the server: ', err); }
   else { console.log('Successfully connected to server on PORT: ', PORT); }
 });
 

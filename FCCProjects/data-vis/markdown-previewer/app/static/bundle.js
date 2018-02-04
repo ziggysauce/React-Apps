@@ -18753,6 +18753,10 @@ var _app = __webpack_require__(30);
 
 var _app2 = _interopRequireDefault(_app);
 
+var _Markdown = __webpack_require__(36);
+
+var _Markdown2 = _interopRequireDefault(_Markdown);
+
 var _Footer = __webpack_require__(33);
 
 var _Footer2 = _interopRequireDefault(_Footer);
@@ -18783,11 +18787,7 @@ var App = function (_Component) {
 			return _react2.default.createElement(
 				'div',
 				{ className: 'app-container' },
-				_react2.default.createElement(
-					'p',
-					null,
-					'Test'
-				),
+				_react2.default.createElement(_Markdown2.default, null),
 				_react2.default.createElement(_Footer2.default, null)
 			);
 		}
@@ -18857,7 +18857,7 @@ exports = module.exports = __webpack_require__(15)(false);
 
 
 // module
-exports.push([module.i, "html, body {\n  padding: 0;\n  margin: 0;\n  width: 100%;\n  height: 100%;\n  background: #244b7b; }\n\n.app-container {\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  padding-bottom: 125px;\n  font-family: 'Montserrat', sans-serif; }\n  .app-container h1 {\n    width: 70vw;\n    padding: 10px;\n    margin-left: 20px;\n    color: #F8F8F8; }\n  .app-container h4 {\n    width: 70vw;\n    padding: 0px 10px;\n    margin-top: -20px;\n    margin-left: 20px;\n    color: #8acbff; }\n  .app-container p {\n    color: #F8F8F8; }\n    .app-container p a {\n      color: #fff399;\n      text-decoration: none; }\n      .app-container p a:hover {\n        text-decoration: underline; }\n", ""]);
+exports.push([module.i, "html, body {\n  padding: 0;\n  margin: 0;\n  width: 100%;\n  height: 100%; }\n\n.app-container {\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  padding-bottom: 125px;\n  font-family: 'Montserrat', sans-serif; }\n  .app-container h1 {\n    width: 70vw;\n    padding: 10px;\n    margin-left: 20px;\n    color: #F8F8F8; }\n  .app-container h4 {\n    width: 70vw;\n    padding: 0px 10px;\n    margin-top: -20px;\n    margin-left: 20px;\n    color: #8acbff; }\n  .app-container p {\n    color: #F8F8F8; }\n    .app-container p a {\n      color: #fff399;\n      text-decoration: none; }\n      .app-container p a:hover {\n        text-decoration: underline; }\n", ""]);
 
 // exports
 
@@ -19127,6 +19127,140 @@ exports = module.exports = __webpack_require__(15)(false);
 
 // module
 exports.push([module.i, "footer {\n  height: 75px;\n  width: 100%;\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  padding: 25px 0px;\n  background: #141414;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n  footer ul {\n    display: flex;\n    flex-direction: row;\n    margin: 0;\n    padding: 0; }\n    footer ul li {\n      list-style-type: none; }\n    footer ul a {\n      font-size: 1.5em; }\n    footer ul i {\n      width: 1em;\n      padding: 0px 10px;\n      text-align: center;\n      color: #555; }\n      footer ul i:hover {\n        color: #F8F8F8; }\n  footer p {\n    color: #555 !important;\n    font-family: 'Montserrat', sans-serif; }\n    footer p span {\n      color: #555; }\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(7);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _markdown = __webpack_require__(37);
+
+var _markdown2 = _interopRequireDefault(_markdown);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Markdown = function (_Component) {
+  _inherits(Markdown, _Component);
+
+  function Markdown() {
+    _classCallCheck(this, Markdown);
+
+    var _this = _possibleConstructorReturn(this, (Markdown.__proto__ || Object.getPrototypeOf(Markdown)).call(this));
+
+    _this.state = {};
+    return _this;
+  }
+
+  _createClass(Markdown, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'markdown-container' },
+        _react2.default.createElement(
+          'div',
+          { className: 'markdown-input' },
+          _react2.default.createElement('textarea', { rows: '25' })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'markdown-output' },
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        )
+      );
+    }
+  }]);
+
+  return Markdown;
+}(_react.Component);
+
+exports.default = Markdown;
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(38);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(16)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./markdown.scss", function() {
+		var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./markdown.scss");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(15)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".markdown-container {\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  flex-wrap: wrap;\n  padding-top: 20px; }\n  .markdown-container .markdown-input, .markdown-container .markdown-output {\n    width: 40%;\n    height: 100%;\n    min-width: 300px;\n    margin: 0px 20px; }\n  .markdown-container .markdown-input textarea {\n    width: 100%;\n    resize: vertical; }\n  .markdown-container .markdown-output {\n    min-height: 400px; }\n", ""]);
 
 // exports
 

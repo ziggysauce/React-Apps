@@ -19,6 +19,7 @@
     "body-parser": "^1.18.2",
     "css-loader": "^0.28.9",
     "express": "^4.16.2",
+    "marked": "^0.3.12",
     "node-sass": "^4.7.2",
     "nodemon": "^1.14.11",
     "path": "^0.12.7",

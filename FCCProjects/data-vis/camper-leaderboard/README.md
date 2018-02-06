@@ -17,4 +17,4 @@ Build an app that is functionally similar to this: https://codepen.io/FreeCodeCa
 **Hint:** To get the top 100 campers of all time: https://fcctop100.herokuapp.com/api/fccusers/top/alltime.
 
 ## Notes
-[Live Demo](camper-leaderboard.ziggysauce.surge.sh)
+[Live Demo](http://camper-leaderboard.ziggysauce.surge.sh/)

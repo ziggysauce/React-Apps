@@ -4,8 +4,6 @@ import styles from '../styles/leaderboard.scss';
 
 class Leaderboard extends Component {
   render() {
-    console.log('hit: ', this.props.data[0].username);
-
 		return (
 			<div className="leaderboard-container">
         <h1>camperLeaderboard  
@@ -18,59 +16,28 @@ class Leaderboard extends Component {
             <tr>
               <th>Rank</th>
               <th>Camper</th>
-              <th className="thirty-days">Points (past 30 days)</th>
-              <th className="all-time">Points (all time)</th>
+              <th>
+                <button className="toggle-score" onClick={e => this.props.getRecent(e)}>Points (past 30 days)</button>
+              </th>
+              <th>
+                <button className="toggle-score" onClick={e => this.props.getAllTime(e)}>Points (all time)</button>
+              </th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>1</td>
-              <td>Filler</td>
-              <td>Filler</td>
-              <td>Filler</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Filler</td>
-              <td>Filler</td>
-              <td>Filler</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Filler</td>
-              <td>Filler</td>
-              <td>Filler</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>Filler</td>
-              <td>Filler</td>
-              <td>Filler</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>Filler</td>
-              <td>Filler</td>
-              <td>Filler</td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>Filler</td>
-              <td>Filler</td>
-              <td>Filler</td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>Filler</td>
-              <td>Filler</td>
-              <td>Filler</td>
-            </tr>
-            <tr>
-              <td>8</td>
-              <td>Filler</td>
-              <td>Filler</td>
-              <td>Filler</td>
-            </tr>
+            {this.props.data.map((user, index) => {
+              return (
+                <tr key={index +1}>
+                  <td>{index + 1}</td>
+                  <td className="user-display">
+                    <img src={user.img} width="40px"/>
+                    <a href={'https://www.freecodecamp.org/' + user.username}>{user.username}</a>
+                  </td>
+                  <td>{user.recent}</td>
+                  <td>{user.alltime}</td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>

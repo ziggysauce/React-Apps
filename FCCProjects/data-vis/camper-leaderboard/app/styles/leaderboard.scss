@@ -11,7 +11,7 @@ $transition: 0.3s;
   border: 1px solid $light-medium-grey;
   font-family: 'Fira Sans Extra Condensed', sans-serif;
   width: 90vw;
-  margin-top: 3em;
+  margin: 3em 0em;
 
   h1 {
     text-align: center;
@@ -33,21 +33,58 @@ $transition: 0.3s;
 
   table {
     width: 100%;
+    border-spacing: 0;
   }
 
   td {
     text-align: center;
     padding: 10px 0px;
     margin: 0;
+      
+    :nth-of-type(1) {
+      border-radius: 50%;
+      vertical-align: middle;
+    }
+
+    img {
+      margin-right: 20px;
+    }
   }
 
-  tr:nth-child(even) {
+  .user-display {
+    text-align: left;
+    padding-left:  20px;
+
+    a {
+      color: $dark-grey;
+      text-decoration: none;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  th {
+    background: $light-grey;
+    color: $accent;
+    font-size: 1.5em;
+  }
+
+  tr:nth-child(odd) {
     background: $light-medium-grey;
   }
 
-  .thirty-days, .all-time {
+  .toggle-score {
     cursor: pointer;
-    width: 25%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: $accent;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px;
     transition: $transition;
     
     &:hover {

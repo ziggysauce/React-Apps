@@ -13,6 +13,9 @@ class App extends Component {
 		this.state = {
 			data: [{}]
 		};
+
+		this.getAllTime = this.getAllTime.bind(this);
+		this.getRecent = this.getRecent.bind(this);
 	}
 
 	getRecent() {
@@ -44,11 +47,9 @@ class App extends Component {
 	}
 	
   render() {
-		console.log('initial data: ', this.state);
-
 		return (
 			<div className="app-container">
-				<Leaderboard data={this.state.data} />
+				<Leaderboard data={this.state.data} getAllTime={this.getAllTime.bind(this)} getRecent={this.getRecent.bind(this)}/>
 				<Footer />
 			</div>
 		);

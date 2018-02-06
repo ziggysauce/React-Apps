@@ -3,8 +3,9 @@ $medium-grey: #555;
 $light-grey: #F8F8F8;
 $light-medium-grey: #b8b8b8;
 $primary: #136613;
-$accent: #8acbff;
+$accent: #52371e;
 $link: #fff399;
+$transition: 0.3s;
 
 .leaderboard-container {
   border: 1px solid $light-medium-grey;
@@ -18,6 +19,16 @@ $link: #fff399;
     color: $light-grey;
     padding: 10px 0px;
     margin-top: 0;
+  }
+
+  .fc-logo {
+    color: $light-grey;
+    padding: 0px 5px;
+    transition: $transition;
+
+    &:hover {
+      color: $accent;
+    }
   }
 
   table {
@@ -37,11 +48,11 @@ $link: #fff399;
   .thirty-days, .all-time {
     cursor: pointer;
     width: 25%;
-    transition: 0.3s;
+    transition: $transition;
     
     &:hover {
       color: $primary;
-      transition: 0.3s;
+      transition: $transition;
     }
   }
 }

@@ -1,0 +1,47 @@
+$dark-grey: #141414;
+$medium-grey: #555;
+$light-grey: #F8F8F8;
+$light-medium-grey: #b8b8b8;
+$primary: #136613;
+$accent: #8acbff;
+$link: #fff399;
+
+.leaderboard-container {
+  border: 1px solid $light-medium-grey;
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  width: 90vw;
+  margin-top: 3em;
+
+  h1 {
+    text-align: center;
+    background: $primary;
+    color: $light-grey;
+    padding: 10px 0px;
+    margin-top: 0;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  td {
+    text-align: center;
+    padding: 10px 0px;
+    margin: 0;
+  }
+
+  tr:nth-child(even) {
+    background: $light-medium-grey;
+  }
+
+  .thirty-days, .all-time {
+    cursor: pointer;
+    width: 25%;
+    transition: 0.3s;
+    
+    &:hover {
+      color: $primary;
+      transition: 0.3s;
+    }
+  }
+}

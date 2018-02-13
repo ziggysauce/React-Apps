@@ -18848,7 +18848,7 @@ exports = module.exports = __webpack_require__(8)(false);
 
 
 // module
-exports.push([module.i, "html, body {\n  padding: 0;\n  margin: 0;\n  width: 100%;\n  height: 100%;\n  background: #244b7b; }\n\n.app-container {\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  padding-bottom: 125px;\n  font-family: 'Montserrat', sans-serif; }\n  .app-container h1 {\n    width: 70vw;\n    padding: 10px;\n    margin-left: 20px;\n    color: #F8F8F8; }\n  .app-container h4 {\n    width: 70vw;\n    padding: 0px 10px;\n    margin-top: -20px;\n    margin-left: 20px;\n    color: #8acbff; }\n  .app-container p {\n    color: #F8F8F8; }\n    .app-container p a {\n      color: #fff399;\n      text-decoration: none; }\n      .app-container p a:hover {\n        text-decoration: underline; }\n", ""]);
+exports.push([module.i, "html, body {\n  padding: 0;\n  margin: 0;\n  width: 100%;\n  height: 100%;\n  background: #244b7b; }\n\n.app-container {\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  font-family: 'Montserrat', sans-serif; }\n  .app-container h1 {\n    width: 70vw;\n    padding: 10px;\n    margin-left: 20px;\n    color: #F8F8F8; }\n  .app-container h4 {\n    width: 70vw;\n    padding: 0px 10px;\n    margin-top: -20px;\n    margin-left: 20px;\n    color: #8acbff; }\n  .app-container p {\n    color: #F8F8F8; }\n    .app-container p a {\n      color: #fff399;\n      text-decoration: none; }\n      .app-container p a:hover {\n        text-decoration: underline; }\n", ""]);
 
 // exports
 
@@ -19437,7 +19437,7 @@ exports = module.exports = __webpack_require__(8)(false);
 
 
 // module
-exports.push([module.i, "footer {\n  height: 75px;\n  width: 100%;\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  padding: 25px 0px;\n  background: #141414;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n  footer ul {\n    display: flex;\n    flex-direction: row;\n    margin: 0;\n    padding: 0; }\n    footer ul li {\n      list-style-type: none; }\n    footer ul a {\n      font-size: 1.5em; }\n    footer ul i {\n      width: 1em;\n      padding: 0px 10px;\n      text-align: center;\n      color: #555; }\n      footer ul i:hover {\n        color: #F8F8F8; }\n  footer p {\n    color: #555 !important;\n    font-family: 'Montserrat', sans-serif; }\n    footer p span {\n      color: #555; }\n", ""]);
+exports.push([module.i, "footer {\n  height: 75px;\n  width: 100%;\n  bottom: 0;\n  left: 0;\n  padding: 25px 0px;\n  background: #141414;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n  footer ul {\n    display: flex;\n    flex-direction: row;\n    margin: 0;\n    padding: 0; }\n    footer ul li {\n      list-style-type: none; }\n    footer ul a {\n      font-size: 1.5em; }\n    footer ul i {\n      width: 1em;\n      padding: 0px 10px;\n      text-align: center;\n      color: #555; }\n      footer ul i:hover {\n        color: #F8F8F8; }\n  footer p {\n    color: #555 !important;\n    font-family: 'Montserrat', sans-serif; }\n    footer p span {\n      color: #555; }\n", ""]);
 
 // exports
 

@@ -9,24 +9,16 @@ html, body {
   height: 100%;
 }
 
-body {
-  background: url('/assets/school.png');
-}
-
 .app-container {
-
+  background: url('/assets/school.png');
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 125px;
+  // padding-bottom: 125px;
   overflow-x: hidden;
   overflow-y: auto;
-
   width: 100%;
-
   font-family: 'Montserrat', sans-serif;
-
-
 }

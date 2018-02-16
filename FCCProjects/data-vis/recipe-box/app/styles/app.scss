@@ -1,0 +1,27 @@
+$dark-grey: #141414;
+$medium-grey: #555;
+$light-grey: #F8F8F8;
+$primary: #244b7b;
+$accent: #8acbff;
+$link: #fff399;
+
+
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: $light-grey;
+}
+
+.app-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  // padding-bottom: 125px;
+  min-height: calc(100vh - 125px);
+
+  font-family: 'Montserrat', sans-serif;
+}

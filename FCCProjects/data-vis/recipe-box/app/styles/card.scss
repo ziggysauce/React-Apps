@@ -1,9 +1,20 @@
 $dark-grey: #141414;
 $medium-grey: #555;
+$shadow: #a8a8a8;
 $light-grey: #F8F8F8;
 $primary: #244b7b;
 $accent: #ff834a;
 $link: #fff399;
+
+.recipe-box-container {
+  box-sizing: border-box;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px 0px;
+}
 
 .card-container {
   border: 2px solid $medium-grey;
@@ -11,6 +22,8 @@ $link: #fff399;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 20px 0px;
+  box-shadow: 3px 3px 10px $shadow;
 
   .card-image {
     img {
@@ -24,7 +37,6 @@ $link: #fff399;
   }
 
   .card-desc {
-    border-bottom: 1px solid $dark-grey;
     color: $dark-grey;
     padding: 5px 5px 0px 5px;
 
@@ -55,6 +67,7 @@ $link: #fff399;
   }
 
   .card-ingredients {
+    border-top: 1px solid $dark-grey;
     font-size: 1em;
     color: black;
     padding: 5px 0px;

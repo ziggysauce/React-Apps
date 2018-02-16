@@ -4,15 +4,11 @@ import styles from '../styles/recipebox.scss';
 import Card from './Card';
 
 class RecipeBox extends Component {
-  constructor() {
-		super();
-		this.state = {};
-	}
-	
   render() {
+		console.log('from recipebox.js: ', this.props.recipes);
 		return (
 			<div>
-        <Card />
+        <Card recipes={this.props.recipes}/>
       </div>
 		);
   }

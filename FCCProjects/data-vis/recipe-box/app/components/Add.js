@@ -3,11 +3,6 @@ import ReactDOM from 'react-dom';
 import styles from '../styles/add.scss';
 
 class Add extends Component {
-  constructor() {
-		super();
-		this.state = {};
-	}
-	
   render() {
 		return (
       <div>

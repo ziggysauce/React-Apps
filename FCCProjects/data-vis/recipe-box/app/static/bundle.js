@@ -18757,6 +18757,14 @@ var _Footer = __webpack_require__(33);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
+var _RecipeBox = __webpack_require__(36);
+
+var _RecipeBox2 = _interopRequireDefault(_RecipeBox);
+
+var _Add = __webpack_require__(42);
+
+var _Add2 = _interopRequireDefault(_Add);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -18783,6 +18791,8 @@ var App = function (_Component) {
 			return _react2.default.createElement(
 				'div',
 				{ className: 'app-container' },
+				_react2.default.createElement(_Add2.default, null),
+				_react2.default.createElement(_RecipeBox2.default, null),
 				_react2.default.createElement(_Footer2.default, null)
 			);
 		}
@@ -19122,6 +19132,442 @@ exports = module.exports = __webpack_require__(15)(false);
 
 // module
 exports.push([module.i, "footer {\n  height: 75px;\n  width: 100%;\n  bottom: 0;\n  left: 0;\n  padding: 25px 0px;\n  background: #141414;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n  footer ul {\n    display: flex;\n    flex-direction: row;\n    margin: 0;\n    padding: 0; }\n    footer ul li {\n      list-style-type: none; }\n    footer ul a {\n      font-size: 1.5em; }\n    footer ul .social-icon {\n      width: 1em;\n      padding: 0px 10px;\n      text-align: center;\n      color: #555; }\n      footer ul .social-icon:hover {\n        color: #F8F8F8; }\n  footer p {\n    color: #555 !important;\n    font-family: 'Montserrat', sans-serif; }\n    footer p span {\n      color: #555; }\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+		value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(7);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _recipebox = __webpack_require__(37);
+
+var _recipebox2 = _interopRequireDefault(_recipebox);
+
+var _Card = __webpack_require__(45);
+
+var _Card2 = _interopRequireDefault(_Card);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var RecipeBox = function (_Component) {
+		_inherits(RecipeBox, _Component);
+
+		function RecipeBox() {
+				_classCallCheck(this, RecipeBox);
+
+				var _this = _possibleConstructorReturn(this, (RecipeBox.__proto__ || Object.getPrototypeOf(RecipeBox)).call(this));
+
+				_this.state = {};
+				return _this;
+		}
+
+		_createClass(RecipeBox, [{
+				key: 'render',
+				value: function render() {
+						return _react2.default.createElement(
+								'div',
+								null,
+								_react2.default.createElement(_Card2.default, null)
+						);
+				}
+		}]);
+
+		return RecipeBox;
+}(_react.Component);
+
+exports.default = RecipeBox;
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(38);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(16)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./recipebox.scss", function() {
+		var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./recipebox.scss");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(15)(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/***/ }),
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(7);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _add = __webpack_require__(43);
+
+var _add2 = _interopRequireDefault(_add);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Add = function (_Component) {
+  _inherits(Add, _Component);
+
+  function Add() {
+    _classCallCheck(this, Add);
+
+    var _this = _possibleConstructorReturn(this, (Add.__proto__ || Object.getPrototypeOf(Add)).call(this));
+
+    _this.state = {};
+    return _this;
+  }
+
+  _createClass(Add, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'h1',
+          null,
+          'Recipe Box'
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'add-button' },
+          _react2.default.createElement(
+            'button',
+            null,
+            '+ Add new recipe'
+          )
+        )
+      );
+    }
+  }]);
+
+  return Add;
+}(_react.Component);
+
+exports.default = Add;
+
+/***/ }),
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(44);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(16)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./add.scss", function() {
+		var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./add.scss");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(15)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".add-button button {\n  font-size: 1em;\n  padding: 10px;\n  border: 2px solid #244b7b;\n  background: transparent;\n  color: #244b7b;\n  transition: 0.3s;\n  cursor: pointer;\n  border-radius: 50px; }\n  .add-button button:hover {\n    transition: 0.3s;\n    color: #F8F8F8;\n    background: #244b7b; }\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(7);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _card = __webpack_require__(46);
+
+var _card2 = _interopRequireDefault(_card);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Card = function (_Component) {
+  _inherits(Card, _Component);
+
+  function Card() {
+    _classCallCheck(this, Card);
+
+    var _this = _possibleConstructorReturn(this, (Card.__proto__ || Object.getPrototypeOf(Card)).call(this));
+
+    _this.state = {};
+    return _this;
+  }
+
+  _createClass(Card, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'card-container' },
+        _react2.default.createElement(
+          'div',
+          { className: 'card-image' },
+          _react2.default.createElement('img', { src: 'https://images.unsplash.com/photo-1496116218417-1a781b1c416c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=aba7663f8f57d37a53706edff54fd1c6&auto=format&fit=crop&w=2700&q=80' })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'card-desc' },
+          _react2.default.createElement(
+            'h3',
+            null,
+            'Recipe Title'
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'row' },
+            _react2.default.createElement(
+              'button',
+              null,
+              _react2.default.createElement('i', { className: 'far fa-caret-square-down' })
+            ),
+            _react2.default.createElement(
+              'button',
+              null,
+              _react2.default.createElement('i', { className: 'far fa-edit' })
+            ),
+            _react2.default.createElement(
+              'button',
+              null,
+              _react2.default.createElement('i', { className: 'far fa-trash-alt' })
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'card-ingredients' },
+          _react2.default.createElement(
+            'p',
+            null,
+            '3 ingredients'
+          )
+        )
+      );
+    }
+  }]);
+
+  return Card;
+}(_react.Component);
+
+exports.default = Card;
+
+/***/ }),
+/* 46 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(47);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(16)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./card.scss", function() {
+		var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./card.scss");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(15)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".card-container {\n  border: 2px solid #555;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between; }\n  .card-container .card-image img {\n    max-width: 300px; }\n  .card-container .row {\n    display: flex;\n    flex-direction: row; }\n  .card-container .card-desc {\n    border-bottom: 1px solid #141414;\n    color: #141414;\n    padding: 5px 5px 0px 5px; }\n    .card-container .card-desc h3 {\n      font-size: 1.5em;\n      padding: 5px 0px;\n      margin: 0; }\n    .card-container .card-desc button {\n      font-size: 1em;\n      padding: 5px;\n      margin: 5px;\n      border: 2px solid #ff834a;\n      background: transparent;\n      color: #ff834a;\n      transition: 0.3s;\n      cursor: pointer;\n      width: 35px;\n      height: 35px;\n      border-radius: 100%; }\n      .card-container .card-desc button:hover {\n        transition: 0.3s;\n        color: #F8F8F8;\n        background: #ff834a; }\n  .card-container .card-ingredients {\n    font-size: 1em;\n    color: black;\n    padding: 5px 0px;\n    margin: 0; }\n    .card-container .card-ingredients p {\n      margin: 5px; }\n", ""]);
 
 // exports
 

@@ -1,0 +1,67 @@
+$dark-grey: #141414;
+$medium-grey: #555;
+$light-grey: #F8F8F8;
+$primary: #244b7b;
+$accent: #ff834a;
+$link: #fff399;
+
+.card-container {
+  border: 2px solid $medium-grey;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .card-image {
+    img {
+      max-width: 300px;
+    }
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card-desc {
+    border-bottom: 1px solid $dark-grey;
+    color: $dark-grey;
+    padding: 5px 5px 0px 5px;
+
+    h3 {
+      font-size: 1.5em;
+      padding: 5px 0px;
+      margin: 0;
+    }
+    button {
+      font-size: 1em;
+      padding: 5px;
+      margin: 5px;
+      border: 2px solid $accent;
+      background: transparent;
+      color: $accent;
+      transition: 0.3s;
+      cursor: pointer;
+      width: 35px;
+      height: 35px;
+      border-radius: 100%;
+  
+      &:hover {
+        transition: 0.3s;
+        color: $light-grey;
+        background: $accent;
+      }
+    }
+  }
+
+  .card-ingredients {
+    font-size: 1em;
+    color: black;
+    padding: 5px 0px;
+    margin: 0;
+    
+    p {
+      margin: 5px;
+    }
+  }
+}

@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 
 import styles from './styles/app.scss';
 import Footer from './components/Footer';
+import RecipeBox from './components/RecipeBox';
+import Add from './components/Add';
 
 
 class App extends Component {
@@ -14,7 +16,8 @@ class App extends Component {
   render() {
 		return (
 			<div className="app-container">
-				
+				<Add />
+				<RecipeBox />
 				<Footer />
 			</div>
 		);

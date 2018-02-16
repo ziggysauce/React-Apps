@@ -1,0 +1,25 @@
+$dark-grey: #141414;
+$medium-grey: #555;
+$light-grey: #F8F8F8;
+$primary: #244b7b;
+$accent: #8acbff;
+$link: #fff399;
+
+.add-button {
+  button {
+    font-size: 1em;
+    padding: 10px;
+    border: 2px solid $primary;
+    background: transparent;
+    color: $primary;
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 50px;
+
+    &:hover {
+      transition: 0.3s;
+      color: $light-grey;
+      background: $primary;
+    }
+  }
+}

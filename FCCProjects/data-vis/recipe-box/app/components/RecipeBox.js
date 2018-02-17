@@ -5,9 +5,8 @@ import Card from './Card';
 
 class RecipeBox extends Component {
   render() {
-		console.log('from recipebox.js: ', this.props.recipes);
 		return (
-			<div>
+			<div className="recipe-box-container">
         <Card recipes={this.props.recipes}/>
       </div>
 		);

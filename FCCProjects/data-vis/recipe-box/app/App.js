@@ -33,14 +33,31 @@ const recipes = [
 class App extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {recipes};
-	}
+		this.state = {
+			recipes,
+			visible: false
+		};
+
+		this.handleNewRecipe = this.handleNewRecipe.bind(this);
+		this.handleAddRecipe = this.handleAddRecipe.bind(this);
+	};
+
+	handleNewRecipe() {
+    !this.state.visible ? this.setState({ visible: true }) : this.setState({ visible: false });
+	};
+	
+	handleAddRecipe() {
+		console.log('from submit click: ', this.state.recipes);
+	};
 
 	render() {
-		console.log('from app.js: ', recipes);
 		return (
 			<div className="app-container">
-				<Add />
+				<Add 
+					handleNewRecipe={this.handleNewRecipe}
+					handleAddRecipe={this.handleAddRecipe}
+					visible={this.state.visible}
+				/>
 				<RecipeBox recipes={this.state.recipes}/>
 				<Footer />
 			</div>

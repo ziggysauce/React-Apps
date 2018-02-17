@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import styles from '../styles/card.scss';
 
 class Card extends Component {
+
   render() {
     console.log('from card.js: ', this.props.recipes);
 		return (
-      <div className="recipe-box-container">
+      <div className="card-wrapper">
         {this.props.recipes.map((recipe, index) => {
           return (
             <div className="card-container" key={index}>

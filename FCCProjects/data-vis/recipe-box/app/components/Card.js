@@ -11,7 +11,6 @@ class Card extends Component {
   }
 
   handleShowIngredients(e, recipe) {
-    console.log("this hit: ", recipe.ingredients);
     const ingredients = recipe.ingredients;
     this.setState({
       ingredients: ingredients,
@@ -23,8 +22,7 @@ class Card extends Component {
 
 
   render() {
-    console.log('state: ', this.state);
-    console.log('from card.js: ', this.props.recipes);
+    // console.log('from card.js: ', this.props.recipes);
 		return (
       <div className="card-wrapper">
         {this.props.recipes.map((recipe, index) => {
@@ -38,7 +36,7 @@ class Card extends Component {
                 <div className="row">
                   <button onClick={(e) => this.handleShowIngredients(e, recipe)}><i className="fas fa-ellipsis-h"></i></button>
                   <button onClick={(e) => this.props.handleEditRecipe(e, recipe, index)}><i className="far fa-edit"></i></button>
-                  <button><i className="far fa-trash-alt"></i></button>
+                  <button onClick={(e) => this.props.handleDeleteRecipe(index)}><i className="far fa-trash-alt"></i></button>
                 </div>
               </div>
               <div className="card-ingredients">

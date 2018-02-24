@@ -36,7 +36,7 @@ class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			recipes,
+			recipes: [],
 			add: false,
 			ingredients: false,
 			edit: false,
@@ -55,20 +55,24 @@ class App extends Component {
 		this.handleClearSelectedOption = this.handleClearSelectedOption.bind(this);
 		this.handleEditRecipe = this.handleEditRecipe.bind(this);
 		this.handleChangeRecipe = this.handleChangeRecipe.bind(this);
+		this.handleDeleteRecipe = this.handleDeleteRecipe.bind(this);
 	};
 
 	handleNewRecipe() {
-		console.log('new recipe clicked: ', this.state);
-    !this.state.add ? this.setState({ add: true }) : this.setState({ add: false });
+		// console.log('new recipe clicked: ', this.state);
+    !this.state.add ? this.setState({ add: true, edit: false }) : this.setState({ add: false });
 	};
 	
 	handleAddRecipe(data) {
-		console.log('from submit click: ', data);
-		this.setState((prevState) => ({ recipes: prevState.recipes.concat(data) }));
+		// console.log('from submit click: ', data);
+		this.setState((prevState) => ({ 
+			recipes: prevState.recipes.concat(data),
+			add: false
+		}));
 	};
 
 	handleShowIngredients(recipe) {
-		console.log('show ingredients: ', recipe);
+		// console.log('show ingredients: ', recipe);
 		this.setState({ 
 			ingredients: !this.state.ingredients,
 			modal: "active",
@@ -88,17 +92,44 @@ class App extends Component {
 	}
 	
 	handleEditRecipe(e, recipe, index) {
-		console.log('first: ', recipe, "index: ", index);
-		!this.state.edit ? this.setState({ edit: true, selectedRecipe: recipe, index: index }) : this.setState({ edit: false });
-		console.log('second: ', this.state);
+		!this.state.edit ? this.setState({ edit: true, add: false, selectedRecipe: recipe, index: index }) : this.setState({ edit: false });
 	}
 
 	handleChangeRecipe(data, index) {
-		console.log('from submit click: ', data, "this is index: ", index);
+		// console.log('from submit click: ', data, "this is index: ", index);
 		let recipes = Object.assign([], this.state.recipes);
 		recipes[index] = data;
 		this.setState({recipes: recipes, edit: false});
 	}
+
+	handleDeleteRecipe(index) {
+		let recipes = Object.assign([], this.state.recipes);
+		recipes.splice(index, 1);
+		this.setState({recipes: recipes});
+	}
+
+	componentDidMount() {
+    try {
+      const json = localStorage.getItem('recipes');
+			const recipes = JSON.parse(json);
+
+      if (recipes) {
+        this.setState((prevState) => ({
+					recipes: prevState.recipes.concat(recipes)
+				}));
+      }
+    } catch (e) {
+			// Do nothing at all
+			console.log('Error getting local storage: ', e);
+    }
+	}
+	
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.recipes !== this.state.recipes) {
+      const json = JSON.stringify(this.state.recipes);
+      localStorage.setItem('recipes', json);
+    }
+  }
 
 	render() {
 		return (
@@ -123,6 +154,7 @@ class App extends Component {
 					handleShowIngredients={this.handleShowIngredients}
 					handleEditRecipe={this.handleEditRecipe}
 					handleChangeRecipe={this.handleChangeRecipe}
+					handleDeleteRecipe={this.handleDeleteRecipe}
 				/>
 				<OptionModal
 					modal={this.state.modal}

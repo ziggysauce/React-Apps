@@ -3,7 +3,7 @@ import Modal from 'react-modal';
 import styles from '../styles/modal.scss';
 
 const OptionModal = (props) => {
-  console.log("hit from modal: ", props);
+  // console.log("hit from modal: ", props);
   return (
     <Modal
       isOpen={!!props.modal}

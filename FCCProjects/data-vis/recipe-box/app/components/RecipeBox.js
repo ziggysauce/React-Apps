@@ -13,6 +13,7 @@ class RecipeBox extends Component {
           modal={this.props.modal}
           handleShowIngredients={this.props.handleShowIngredients}
           handleEditRecipe={this.props.handleEditRecipe}
+          handleDeleteRecipe={this.props.handleDeleteRecipe}
         />
       </div>
 		);

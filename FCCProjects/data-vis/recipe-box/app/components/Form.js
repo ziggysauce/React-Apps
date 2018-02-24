@@ -5,7 +5,7 @@ import styles from '../styles/form.scss';
 export default class Form extends Component {
   handleAddRecipe(e) {
     e.preventDefault();
-    console.log('this is from add.js: ', this.props);
+    // console.log('this is from add.js: ', this.props);
 
     const data = {
       image: e.target.elements.image.value,
@@ -18,7 +18,7 @@ export default class Form extends Component {
 
   handleChangeRecipe(e) {
     e.preventDefault();
-    console.log('this is from edit: ', this.props);
+    // console.log('this is from edit: ', this.props);
 
     const data = {
       image: e.target.elements.image.value,
@@ -30,7 +30,7 @@ export default class Form extends Component {
   }
 
   render() {    
-    console.log("from form: ", this.props);
+    // console.log("from form: ", this.props);
 		return (
       <div className="form-container">
         {this.props.add && 

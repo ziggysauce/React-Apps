@@ -4,7 +4,7 @@ import styles from '../styles/add.scss';
 
 export default class Add extends Component {
   render() {    
-    console.log('from add.js: ', this.props);
+    // console.log('from add.js: ', this.props);
 		return (
       <div className="add-container">
         <h1>Recipe Box</h1>

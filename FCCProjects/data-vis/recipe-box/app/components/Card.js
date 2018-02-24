@@ -15,12 +15,12 @@ class Card extends Component {
     const ingredients = recipe.ingredients;
     this.setState({
       ingredients: ingredients,
-      selectedIngredients: ingredients,
       modal: "active"
     });
 
     this.props.handleShowIngredients(recipe);
   }
+
 
   render() {
     console.log('state: ', this.state);
@@ -36,8 +36,8 @@ class Card extends Component {
               <div className="card-desc">
                 <h3>{recipe.title}</h3>
                 <div className="row">
-                  <button onClick={(e) => this.handleShowIngredients(e, recipe)}><i className="fas fa-arrow-down"></i></button>
-                  <button><i className="far fa-edit"></i></button>
+                  <button onClick={(e) => this.handleShowIngredients(e, recipe)}><i className="fas fa-ellipsis-h"></i></button>
+                  <button onClick={(e) => this.props.handleEditRecipe(e, recipe, index)}><i className="far fa-edit"></i></button>
                   <button><i className="far fa-trash-alt"></i></button>
                 </div>
               </div>

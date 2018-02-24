@@ -5,6 +5,7 @@ import styles from './styles/app.scss';
 import Footer from './components/Footer';
 import RecipeBox from './components/RecipeBox';
 import Add from './components/Add';
+import Form from './components/Form';
 import OptionModal from './components/OptionModal';
 
 // Seed data for recipes
@@ -38,7 +39,9 @@ class App extends Component {
 			recipes,
 			add: false,
 			ingredients: false,
+			edit: false,
 			modal: undefined,
+			index: '',
 			selectedRecipe: {
 				image: '',
 				ingredients: [],
@@ -50,9 +53,12 @@ class App extends Component {
 		this.handleAddRecipe = this.handleAddRecipe.bind(this);
 		this.handleShowIngredients = this.handleShowIngredients.bind(this);
 		this.handleClearSelectedOption = this.handleClearSelectedOption.bind(this);
+		this.handleEditRecipe = this.handleEditRecipe.bind(this);
+		this.handleChangeRecipe = this.handleChangeRecipe.bind(this);
 	};
 
 	handleNewRecipe() {
+		console.log('new recipe clicked: ', this.state);
     !this.state.add ? this.setState({ add: true }) : this.setState({ add: false });
 	};
 	
@@ -62,7 +68,7 @@ class App extends Component {
 	};
 
 	handleShowIngredients(recipe) {
-		console.log('arrow button hit: ', recipe);
+		console.log('show ingredients: ', recipe);
 		this.setState({ 
 			ingredients: !this.state.ingredients,
 			modal: "active",
@@ -79,21 +85,44 @@ class App extends Component {
 				title: ''
 			},
 		});
-  }
+	}
+	
+	handleEditRecipe(e, recipe, index) {
+		console.log('first: ', recipe, "index: ", index);
+		!this.state.edit ? this.setState({ edit: true, selectedRecipe: recipe, index: index }) : this.setState({ edit: false });
+		console.log('second: ', this.state);
+	}
+
+	handleChangeRecipe(data, index) {
+		console.log('from submit click: ', data, "this is index: ", index);
+		let recipes = Object.assign([], this.state.recipes);
+		recipes[index] = data;
+		this.setState({recipes: recipes, edit: false});
+	}
 
 	render() {
 		return (
 			<div className="app-container">
 				<Add 
 					handleNewRecipe={this.handleNewRecipe}
+				/>
+				<Form 
 					handleAddRecipe={this.handleAddRecipe}
+					handleChangeRecipe={this.handleChangeRecipe}
 					add={this.state.add}
+					edit={this.state.edit}
+					index={this.state.index}
+					selectedRecipe={this.state.selectedRecipe}
 				/>
 				<RecipeBox 
 					recipes={this.state.recipes}
 					ingredients={this.state.ingredients}
 					modal={this.state.modal}
+					edit={this.state.edit}
+					selectedRecipe={this.state.selectedRecipe}
 					handleShowIngredients={this.handleShowIngredients}
+					handleEditRecipe={this.handleEditRecipe}
+					handleChangeRecipe={this.handleChangeRecipe}
 				/>
 				<OptionModal
 					modal={this.state.modal}

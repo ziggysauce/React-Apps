@@ -17,7 +17,7 @@ $shadow: #a8a8a8;
   background: $primary;
   color: $light-grey;
   // position: absolute;
-  width: 400px;
+  min-width: 300px;
   padding: 20px;
   margin: 20px;
   box-shadow: 3px 3px 10px $shadow;
@@ -29,6 +29,7 @@ $shadow: #a8a8a8;
     input {
       padding: 10px;
       margin: 10px;
+      border-radius: 0px;
       border: none;
       border-bottom: 2px solid $light-grey;
       outline: none;

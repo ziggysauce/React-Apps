@@ -39,7 +39,7 @@ export default class Form extends Component {
             <h2>Whatcha makin'?</h2>
             <input name="image" type="text" placeholder="img url..." />
             <input name="title" type="text" placeholder="recipe name..." />
-            <input name="ingredients" type="text" placeholder="separate ingredients with a comma and space" />
+            <input name="ingredients" type="text" placeholder="separate ingredients with a comma" />
             <button className="submit-button">Submit</button>
           </form>
         </div>

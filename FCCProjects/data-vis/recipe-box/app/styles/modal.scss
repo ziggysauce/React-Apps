@@ -45,11 +45,17 @@ $shadow: #a8a8a8;
   padding: 1em;
   font-size: 2em;
   font-weight: 300;
-  word-break: break-all;
   list-style-type: none;
-
+  
   li {
+    word-break: break-word;
     padding: .2em;
+  }
+}
+
+@media (max-width: 450px) {
+  .modal-body li {
+    font-size: 0.5em;
   }
 }
 

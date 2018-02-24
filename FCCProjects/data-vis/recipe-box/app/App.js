@@ -5,6 +5,7 @@ import styles from './styles/app.scss';
 import Footer from './components/Footer';
 import RecipeBox from './components/RecipeBox';
 import Add from './components/Add';
+import OptionModal from './components/OptionModal';
 
 // Seed data for recipes
 const recipes = [
@@ -35,20 +36,50 @@ class App extends Component {
 		super(props);
 		this.state = {
 			recipes,
-			visible: false
+			add: false,
+			ingredients: false,
+			modal: undefined,
+			selectedRecipe: {
+				image: '',
+				ingredients: [],
+				title: ''
+			},
 		};
 
 		this.handleNewRecipe = this.handleNewRecipe.bind(this);
 		this.handleAddRecipe = this.handleAddRecipe.bind(this);
+		this.handleShowIngredients = this.handleShowIngredients.bind(this);
+		this.handleClearSelectedOption = this.handleClearSelectedOption.bind(this);
 	};
 
 	handleNewRecipe() {
-    !this.state.visible ? this.setState({ visible: true }) : this.setState({ visible: false });
+    !this.state.add ? this.setState({ add: true }) : this.setState({ add: false });
 	};
 	
-	handleAddRecipe() {
-		console.log('from submit click: ', this.state.recipes);
+	handleAddRecipe(data) {
+		console.log('from submit click: ', data);
+		this.setState((prevState) => ({ recipes: prevState.recipes.concat(data) }));
 	};
+
+	handleShowIngredients(recipe) {
+		console.log('arrow button hit: ', recipe);
+		this.setState({ 
+			ingredients: !this.state.ingredients,
+			modal: "active",
+			selectedRecipe: recipe,
+		})
+	}
+
+	handleClearSelectedOption() {
+    this.setState({ 
+			modal: undefined,
+			selectedRecipe: {
+				image: '',
+				ingredients: [],
+				title: ''
+			},
+		});
+  }
 
 	render() {
 		return (
@@ -56,9 +87,19 @@ class App extends Component {
 				<Add 
 					handleNewRecipe={this.handleNewRecipe}
 					handleAddRecipe={this.handleAddRecipe}
-					visible={this.state.visible}
+					add={this.state.add}
 				/>
-				<RecipeBox recipes={this.state.recipes}/>
+				<RecipeBox 
+					recipes={this.state.recipes}
+					ingredients={this.state.ingredients}
+					modal={this.state.modal}
+					handleShowIngredients={this.handleShowIngredients}
+				/>
+				<OptionModal
+					modal={this.state.modal}
+					selectedRecipe={this.state.selectedRecipe}
+					handleClearSelectedOption={this.handleClearSelectedOption}
+				/>
 				<Footer />
 			</div>
 		);

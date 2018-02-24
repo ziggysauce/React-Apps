@@ -1,0 +1,71 @@
+$dark-grey: #141414;
+$medium-grey: #555;
+$light-grey: #F8F8F8;
+$primary: #244b7b;
+$accent: #ff834a;
+$link: #fff399;
+$shadow: #a8a8a8;
+
+.ReactModalPortal > div {
+  opacity: 0;
+}
+
+.ReactModalPortal .ReactModal__Overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 200ms ease-in-out;
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.modal {
+  font-family: 'Montserrat', sans-serif;
+  background: $primary;
+  color: $light-grey;
+  max-width: 900px;
+  outline: none;
+  padding: 2em;
+  text-align: center;
+}
+
+.modal-title {
+  margin: 1em 1em 0 1em;
+  font-size: 3em;
+}
+
+.modal-body {
+  margin: 0;
+  padding: 1em;
+  font-size: 2em;
+  font-weight: 300;
+  word-break: break-all;
+  list-style-type: none;
+
+  li {
+    padding: .2em;
+  }
+}
+
+.button {
+  font-size: 1.5em;
+  padding: 10px;
+  border-radius: 3px;
+  border: 2px solid $accent;
+  background: transparent;
+  color: $light-grey;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background: $accent;
+    color: $light-grey;
+    transition: 0.3s;
+  }
+}

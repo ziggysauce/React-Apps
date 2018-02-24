@@ -3,8 +3,27 @@ import ReactDOM from 'react-dom';
 import styles from '../styles/card.scss';
 
 class Card extends Component {
+  constructor() {
+    super();
+    this.state = {}
+
+    this.handleShowIngredients = this.handleShowIngredients.bind(this);
+  }
+
+  handleShowIngredients(e, recipe) {
+    console.log("this hit: ", recipe.ingredients);
+    const ingredients = recipe.ingredients;
+    this.setState({
+      ingredients: ingredients,
+      selectedIngredients: ingredients,
+      modal: "active"
+    });
+
+    this.props.handleShowIngredients(recipe);
+  }
 
   render() {
+    console.log('state: ', this.state);
     console.log('from card.js: ', this.props.recipes);
 		return (
       <div className="card-wrapper">
@@ -17,7 +36,7 @@ class Card extends Component {
               <div className="card-desc">
                 <h3>{recipe.title}</h3>
                 <div className="row">
-                  <button><i className="fas fa-arrow-down"></i></button>
+                  <button onClick={(e) => this.handleShowIngredients(e, recipe)}><i className="fas fa-arrow-down"></i></button>
                   <button><i className="far fa-edit"></i></button>
                   <button><i className="far fa-trash-alt"></i></button>
                 </div>

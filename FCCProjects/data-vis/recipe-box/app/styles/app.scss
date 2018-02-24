@@ -20,8 +20,7 @@ html, body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  // padding-bottom: 125px;
-  min-height: calc(100vh - 125px);
+  min-height: 100vh;
 
   font-family: 'Montserrat', sans-serif;
 }

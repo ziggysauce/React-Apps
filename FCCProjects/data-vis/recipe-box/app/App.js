@@ -120,7 +120,7 @@ class App extends Component {
       }
     } catch (e) {
 			// Do nothing at all
-			console.log('Error getting local storage: ', e);
+			this.setState({ recipes: recipes });
     }
 	}
 	

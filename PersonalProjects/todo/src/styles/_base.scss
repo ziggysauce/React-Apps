@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+.test {
+  color: red;
+  font-size: 4em;
+}
+
+#tester {
+  color: orange;
+  text-decoration: underline;
+}
+
+.wrapper {
+  border: 2px solid purple;
+}

@@ -11,5 +11,5 @@ Images by [@thelivingethan](https://www.instagram.com/thelivingethan/?hl=en)
 Tutorial from [Medium](https://medium.com/codingthesmartway-com-blog/learn-redux-introduction-to-state-management-with-react-b87bc570b12a)  
 Project setup with [Create React App](https://github.com/facebookincubator/create-react-app)  
 
-[Medium Article]()  
+[Medium Article](https://medium.com/@ziggysauce/learn-to-react-poll-d835d31e0113)  
 [Live Demo](http://poll.ziggysauce.surge.sh/)  

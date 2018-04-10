@@ -1,3 +1,7 @@
+body {
+  font-family: 'Marvel', sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -43,4 +47,37 @@
   width: 100%;
   height: 100%;
   cursor: pointer;
+}
+
+.jumbotron {
+  padding: 2rem;
+  border-radius: 0px;
+  background: white;
+}
+
+.container {
+  max-height: 100vh;
+  width: 100vw;
+  padding: 0;
+  border-radius: 0;
+}
+
+.results-wrapper {
+  padding-bottom: 2em;
+}
+
+.thor-color {
+  background-color: #7AAFD6;
+}
+
+.cap-color {
+  background-color: #7B160D;
+}
+
+.panther-color {
+  background-color: #5D328D;
+}
+
+.label {
+  font-size: 1em;
 }

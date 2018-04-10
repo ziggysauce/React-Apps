@@ -50,18 +50,18 @@ class Results extends Component {
 
   render() {
     return (
-      <div>
-        <span className="label label-danger">Thor: {this.votesOneInPercent().toFixed(2) + '%'}</span>
-        <div className="progress progress-striped active">
-          <div className="progress-bar progress-bar-danger" style={this.votesOneInPercentStyle()}></div>
+      <div className="results-wrapper">
+        <span className="label">Thor: {this.votesOneInPercent().toFixed(2) + '%'}</span>
+        <div className="progress">
+          <div className="progress-bar thor-color" style={this.votesOneInPercentStyle()}></div>
         </div>
-        <span className="label label-info">Captain America: {this.votesTwoInPercent().toFixed(2) + '%'}</span>
-        <div className="progress progress-striped active">
-          <div className="progress-bar progress-bar-info" style={this.votesTwoInPercentStyle()}></div>
+        <span className="label">Captain America: {this.votesTwoInPercent().toFixed(2) + '%'}</span>
+        <div className="progress">
+          <div className="progress-bar cap-color" style={this.votesTwoInPercentStyle()}></div>
         </div>
-        <span className="label label-success">Black Panther: {this.votesThreeInPercent().toFixed(2) + '%'}</span>
-        <div className="progress progress-striped active">
-          <div className="progress-bar progress-bar-success" style={this.votesThreeInPercentStyle()}></div>
+        <span className="label">Black Panther: {this.votesThreeInPercent().toFixed(2) + '%'}</span>
+        <div className="progress">
+          <div className="progress-bar panther-color" style={this.votesThreeInPercentStyle()}></div>
         </div>
       </div>
     )

@@ -6,6 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 import { createStore } from 'redux';
 import myApp from './reducers';
 import Results from './components/results';
+import Credits from './components/credits';
 
 let store = createStore(myApp);
 
@@ -15,6 +16,7 @@ function render() {
       <App store={store}/>
       <hr />
       <Results store={store}/>
+      <Credits />
     </div>,
     document.getElementById('root')
   );

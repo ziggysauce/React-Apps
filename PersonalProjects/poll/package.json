@@ -1,7 +1,9 @@
 {
   "name": "poll",
+  "description": "simple poll",
   "version": "0.1.0",
-  "private": true,
+  "license": "MIT",
+  "author": "daniel nguyen",
   "dependencies": {
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
